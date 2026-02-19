@@ -7,11 +7,13 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-        <header>
-            <h1><a href="/">Django Girls Blog</a></h1>
+        <header class="page-header">
+            <div class ="container">>
+                <h1><a href="/">Django Girls Blog</a></h1>
+            </div>
         </header>
     {% for post in posts %}
-        <article>
+        <article class="post">
             <time>published: {{ post.published_date }}</time>
             <h2>
                 <a href="{% url 'post_detail' pk=post.pk %}">
